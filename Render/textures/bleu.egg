@@ -1,0 +1,29 @@
+<Texture> bleu.jpg {
+  bleu.jpg
+}
+<VertexPool> bleu {
+  <Vertex> 0 {
+    -1 0 1
+    <UV> { 0 0 }
+    <Normal> { 0 1 0 }
+  }
+  <Vertex> 1 {
+    1 0 1
+    <UV> { 10 0 }
+    <Normal> { 0 1 0 }
+  }
+  <Vertex> 2 {
+    1 0 -1
+    <UV> { 10 10 }
+    <Normal> { 0 1 0 }
+  }
+  <Vertex> 3 {
+    -1 0 -1
+    <UV> { 0 10 }
+    <Normal> { 0 1 0 }
+  }
+}
+<Polygon> {
+  <TRef> { bleu.jpg }
+  <VertexRef> { 0 1 2 3 <Ref> { bleu } }
+}
