@@ -1,6 +1,6 @@
 # Utilisation des programmes
 
-### select_pixels.py
+- ### select_pixels.py
 
 Permet de sélectionner les pixels à utiliser pour l'entraînement.
 
@@ -16,7 +16,7 @@ python select_pixels.py /Users/YourUser/Documents/MesSuperImages"
 - On enregistre les coordonnées sous forme d'un fichier .csv
 
 
-### get_data_torch.py / get_data_keras.py
+- ### get_data_torch.py / get_data_keras.py
 
 Ce programme prend en entrée les données ci dessous, et retourne les informations nécessaires à la prédiction et exploration de l'espace latent (Carte latente, Poids du décodeur, Résultat du t-SNE)
 
@@ -42,7 +42,7 @@ Chemin du fichier contenant les coordonnées des pixels d'entraînement (e.g., d
 **!! Attention !! Par défaut l'extension de l'image est mise sur .jpg**
 donc à changer dans *pattern* ligne 100 et le *endswith* ligne 119
 
-### viz.py
+- ### viz.py
 
 -file (fichier .csv contenant les positions des points t-SNE, ainsi que les position de ces points dans l'image réelle)
 
@@ -53,6 +53,6 @@ donc à changer dans *pattern* ligne 100 et le *endswith* ligne 119
 Programme qui permet de visualiser le t-SNE en colorisant les points en fonction de leur position dans l'image initiale
 (comme c'est pour l'image wallpaper, on fait une colorisation en fonciton de la distance au centre)
 
-### Convert_ipynb.py
+- ### Convert_ipynb.py
 
 Programme bonus qui permet de traduire un fichier .ipynb en .py, je l'utilisais pour exécuter mes notebooks sur plafrim sans avoir à copier coller toutes les lignes dans un fichier python
