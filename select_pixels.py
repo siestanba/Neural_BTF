@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import simpledialog, filedialog
 from PIL import Image, ImageTk
-import numpy as np
+import pandas as pd
 import sys
 import os
 import re
@@ -125,31 +125,21 @@ def change_sampling_step():
         print(f"Nouveau pas d'échantillonnage: {sampling_step}.")
 
 # Sauvegarder les coordonnées au format csv
-def save_selection_to_csv():
+def save_selection_to_csv(output_filename):
     if not selected_pixels_set:
         print("Aucun pixel n'a été sélectionné.")
         return
 
-    file_path = filedialog.asksaveasfilename(
-        defaultextension=".csv",
-        filetypes=[("CSV files", "*.csv"), ("All files", "*.*")],
-    )
+    try:
+        # Créer un DataFrame avec les coordonnées des pixels sélectionnés
+        # Les pixels sont déjà stockés sous forme de (x, y)
+        df_selected_pixels = pd.DataFrame(list(selected_pixels_set), columns=['x', 'y'])
 
-    if file_path:
-        try:
-            with open(file_path, 'w', newline='') as csvfile:
-                csv_writer = csv.writer(csvfile)
-                csv_writer.writerow(['x', 'y']) # header
-                
-                # on trie les pixels avant de les mettre au format csv
-                sorted_pixels = sorted(list(selected_pixels_set), key=lambda p: (p[1], p[0]))
-                
-                for pixel in sorted_pixels:
-                    csv_writer.writerow([pixel[0], pixel[1]])
-            print(f"{len(selected_pixels_set)} pixels ont été sauvegardés dans {file_path}")
-        except Exception as e:
-            print(f"Erreur lors de la sauvegarde: {e}")
-
+        # Enregistrer le DataFrame dans le fichier CSV
+        df_selected_pixels.to_csv(output_filename, index=False)
+        print(f"{len(selected_pixels_set)} pixels ont été sauvegardés dans {output_filename}")
+    except Exception as e:
+        print(f"Erreur lors de la sauvegarde: {e}")
 
 # =========================================================
 # Importation des images
@@ -187,12 +177,13 @@ def get_images(chemin):
 
 # GUI Setup
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Utilisation: python GUI.py <chemin_vers_les_images>")
-        print("Exemple: python programme.py /Users/YourUser/Documents/MesSuperImages")
+    if len(sys.argv) < 3:
+        print("Utilisation: python GUI.py <chemin_vers_les_images> <nom_du_fichier_de_sortie.csv>")
+        print("Exemple: python programme.py /Users/YourUser/Documents/MesSuperImages mes_pixels_selectionnes.csv")
         sys.exit(1)
 
     path_to_image = sys.argv[1]
+    output_csv_filename = sys.argv[2] # Récupération du nom du fichier de sortie
 
     root = tk.Tk()
     root.title(f"Pixel Selector (Original: {original_image_width}x{original_image_height}, Affichage: {display_image_width}x{display_image_height}) - Max : {total_pixels_in_original_image} pixels")
@@ -218,7 +209,7 @@ if __name__ == "__main__":
     change_sampling_button = tk.Button(button_frame, text="Pas de l'échantillonnage", command=change_sampling_step)
     change_sampling_button.pack(side=tk.LEFT, padx=5)
 
-    save_button = tk.Button(button_frame, text="Sauvegarder", command=save_selection_to_csv)
+    save_button = tk.Button(button_frame, text="Sauvegarder", command=lambda: save_selection_to_csv(output_csv_filename))
     save_button.pack(side=tk.LEFT, padx=5)
 
     root.mainloop()

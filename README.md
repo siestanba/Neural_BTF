@@ -4,9 +4,9 @@
 
 Permet de sélectionner les pixels à utiliser pour l'entraînement.
 
-- On lance le programme avec le chemin du dossier contenant les images
+- On lance le programme avec le chemin du dossier contenant les images et le nom de sortie du fichier
 ```
-python select_pixels.py /Users/YourUser/Documents/MesSuperImages"
+python select_pixels.py /Users/YourUser/Documents/MesSuperImages poids.csv"
 ```
 
 - Sélection des pixels avec la souris
