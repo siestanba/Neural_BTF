@@ -56,3 +56,7 @@ Programme qui permet de visualiser le t-SNE en colorisant les points en fonction
 ## Convert_ipynb.py
 
 Programme bonus qui permet de traduire un fichier .ipynb en .py, je l'utilisais pour exécuter mes notebooks sur plafrim sans avoir à copier coller toutes les lignes dans un fichier python
+
+## Utiliser la plateforme PlaFRIM
+
+Document qui illustre l'utilisation de PlaFRIM pour l'entraînement de modèle d'apprentissage.
