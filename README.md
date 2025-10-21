@@ -1,3 +1,19 @@
+# Neural BTF Compression
+
+Bidirectional Texture Functions (BTFs) characterize the local appearance of a surface under varying viewing and lighting directions. 
+These datasets can be extremely memory-intensive due to their high dimensionality.
+During this project, I investigated encoder-decoder architectures capable of compressing BTF data into a lower-dimensional latent space.
+Key Contributions:
+
+Neural BTF Compression: Enabled users to select regions of interest for targeted compression.
+Interactive Exploration: Developed tools to visualize and align the latent space post-compression.
+Real-Time Generation: Implemented interactive rendering for continuous camera/light pairs.
+
+Interactive Exploration -> https://sebastian.cafe/Neural/index.php
+
+This project were conducted during my intership at Centre Inria de l'Université de Bordeaux, under the supervision of Patrick Reuter (Manao Team)
+
+
 # Utilisation des programmes
 
 ## select_pixels.py
