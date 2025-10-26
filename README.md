@@ -17,7 +17,7 @@ This project were conducted during my intership at Centre Inria de l'Université
 
 | Aperçu | Description |
 |---|---|
-| <img src="assets/viz.png" alt="Visualization" width="260"></a> | **Latent space visualization**<br>This interface allow you to navigate trough the neural network's latent space, here you can see that the cluster at the left corresponds to the violet inscription on theleft of the texture|
+| <a href="assets/viz.png"><img src="assets/viz.png" alt="Visualization" width="260"></a> | **Latent space visualization**<br>This interface allow you to navigate trough the neural network's latent space, here you can see that the cluster at the left corresponds to the neural network's encoded information about the violet inscription on the left of the texture|
 
 
 
