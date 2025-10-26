@@ -15,6 +15,13 @@ Interactive Exploration -> https://sebastian.cafe/Neural/index.php
 This project were conducted during my intership at Centre Inria de l'Université de Bordeaux, under the supervision of Patrick Reuter (Manao Team)
 
 
+| Aperçu | Description |
+|---|---|
+| <img src="assets/viz.png" alt="Visualization" width="260"></a> | **Latent space visualization**<br>This interface allow you to navigate trough the neural network's latent space, here you can see that the cluster at the left corresponds to the violet inscription on theleft of the texture|
+
+
+
+
 # Utilisation des programmes
 
 ## select_pixels.py
