@@ -17,14 +17,7 @@ This project were conducted during my intership at Centre Inria de l'Université
 
 | Preview | Description |
 |---|---|
-| <a href="assets/select.png"><img src="assets/select.png" alt="Selection" width="260"></a> | **Pixel selection**<br>This interface allow you to select the (interest zones), pixels you want the neural network to train from|
-| <a href="assets/viz.png"><img src="assets/viz.png" alt="Visualization" width="260"></a> | **Latent space visualization**<br>This interface allow you to navigate trough the neural network's latent space, here you can see that the cluster at the left corresponds to the neural network's encoded information about the violet inscription at the right border of the texture|
-| <a href="assets/gen.png"><img src="assets/gen.png" alt="Generation" width="260"></a> | **Continous texture generation**<br>This interface allow you to generate new images of the texture, with new angles of camera and light|
-
-
-| Preview | Description |
-|---|---|
-| <a href="assets/select.png"><img src="assets/select.png" alt="Pixel selection UI" width="260"></a> | **Pixel selection**<br>Use this interface to mark regions of interest (ROIs)—the pixels the neural network will train on. |
+| <a href="assets/select.png"><img src="assets/select.png" alt="Pixel selection UI" width="260"></a> | **Pixel selection**<br>Use this interface to mark regions of interest (ROIs) the pixels the neural network will train on. |
 | <a href="assets/viz.png"><img src="assets/viz.png" alt="Latent space visualization UI" width="260"></a> | **Latent space visualization**<br>Use this interface to navigate through the neural network’s latent space. In this example, the cluster on the left corresponds to the model’s encoding of the purple inscription along the texture’s right edge. |
 | <a href="assets/gen.png"><img src="assets/gen.png" alt="Texture generation UI" width="260"></a> | **Continuous texture generation**<br>Use this interface to generate new images of the texture with different camera viewpoints and lighting conditions. |
 
